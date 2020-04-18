@@ -1,0 +1,280 @@
+[ClientText]
+MenuItem0='Показать видеочат'
+MenuItem1='Сделать видеозвонок'
+
+[ClientForm]
+object ClientForm: TClientForm
+  Left = 1
+  Top = 1
+  Width = 400
+  Height = 500
+  ClientWidth = 400
+  Caption = 'Client file transfer for DChat'
+  Color = clBtnFace
+end
+
+[PageControl1]
+object PageControl1: TPageControl
+  Left = 0
+  Top = 0
+  Width = 400
+  Height = 390
+  Align = alClient
+  TabOrder = 0
+  ExplicitWidth = 400
+end
+
+[TabSheet1]
+object TabSheet1: TTabSheet
+  Caption = 'TabSheet1'
+end
+
+[Panel1]
+object Panel1: TPanel
+  Left = 0
+  Top = 0
+  Align = alClient
+  TabOrder = 0
+  Caption = ''
+end
+
+[CloseButton]
+object CloseButton: TButton
+   Left = 3
+   Top = 294
+   Width = 385
+   Height = 25
+   Caption = 'Close'
+   Enabled = False                                    
+   TabOrder = 0
+end
+
+[Label1]
+object Label1: TLabel
+  Left = 1
+  Top = 28
+  Width = 56
+  Height = 13
+  Caption = 'User Name:'
+end
+
+[Label2]
+object Label2: TLabel
+  Left = 2
+  Top = 66
+  Width = 75
+  Height = 13
+  Caption = 'Server Address:'
+end
+
+[Label3]
+object Label3: TLabel
+  Left = 2
+  Top = 111
+  Width = 56
+  Height = 13
+  Caption = 'Server Port:'
+end
+
+[Label4]
+object Label4: TLabel
+  Left = 3
+  Top = 132
+  Width = 51
+  Height = 13
+  Caption = 'Messages:'
+end
+
+[SpeedButton1]
+object SpeedButton1: TSpeedButton
+  Left = 162
+  Top = 107
+  Width = 23
+  Height = 22
+  Hint = 'Connect/Disconnect'
+  AllowAllUp = True
+  GroupIndex = 1
+  Flat = True
+  Glyph.Data = {
+            66010000424D6601000000000000760000002800000014000000140000000100
+            040000000000F000000000000000000000001000000000000000000000000000
+            8000008000000080800080000000800080008080000080808000C0C0C0000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+            00333333000030FFFFFFFFFFF03333330000330F0F0F0F0F0333333300000000
+            FFFFFFF00003333300000FF800000008FF03333300000F9FFFFFFFF000033333
+            00000FFFFFFFFFFFFF0333330000300000000000003333330000333000000000
+            3333333300003330FFFF00703333333300003330F0000B307833333300003330
+            F0CCC0BB0078333300003330F0CCC00BB300733300003330F00000F0BBB00733
+            00003330FFFFFFF00BBB00830000333000000000BBB008330000333333333330
+            0BBB00830000333333333333300BB008000033333333333333300B0000003333
+            33333333333330000000}
+end
+
+[edUserName]
+object edUserName: TEdit
+   Left = 1
+   Top = 42
+   Width = 395
+   Height = 21
+   Hint = 'This is the name that others will see when you post a message.'
+   ReadOnly = True
+   TabOrder = 1
+   Text = 'Client'
+end
+
+[edServer]
+object edServer: TEdit
+  Left = 2
+  Top = 81
+  Width = 395
+  Height = 21
+  Hint = 'This is the address to the server that you want to connect to.'
+  TabOrder = 2
+  Text = '127.0.0.1'
+end
+
+[sePort]
+object sePort: TSpinEdit
+  Left = 64
+  Top = 106
+  Width = 60
+  Height = 22
+  MaxValue = 0
+  MinValue = 0
+  TabOrder = 3
+  Value = 5558
+end
+
+[Button2]
+object Button2: TButton
+  Left = 191
+  Top = 107
+  Width = 82
+  Height = 22
+  Caption = 'CMD_HELLO'
+  Enabled = False
+  TabOrder = 4
+end
+
+[memo1]
+object memo1: TMemo
+  Left = 3
+  Top = 158
+  Width = 395
+  Height = 129
+  Hint = 'Current Messages since you logged in.'
+  TabOrder = 5
+end
+
+[SpdBtnConnect]
+object SpdBtnConnect: TSpeedButton
+  Left = 162
+  Top = 107
+  Width = 23
+  Height = 22
+  Hint = 'Connect/Disconnect'
+  AllowAllUp = True
+  GroupIndex = 1
+  Flat = True
+  Glyph.Data = {
+            66010000424D6601000000000000760000002800000014000000140000000100
+            040000000000F000000000000000000000001000000000000000000000000000
+            8000008000000080800080000000800080008080000080808000C0C0C0000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+            00333333000030FFFFFFFFFFF03333330000330F0F0F0F0F0333333300000000
+            FFFFFFF00003333300000FF800000008FF03333300000F9FFFFFFFF000033333
+            00000FFFFFFFFFFFFF0333330000300000000000003333330000333000000000
+            3333333300003330FFFF00703333333300003330F0000B307833333300003330
+            F0CCC0BB0078333300003330F0CCC00BB300733300003330F00000F0BBB00733
+            00003330FFFFFFF00BBB00830000333000000000BBB008330000333333333330
+            0BBB00830000333333333333300BB008000033333333333333300B0000003333
+            33333333333330000000}
+end
+
+[SendFileButton]
+object SendFileButton: TButton
+   Left = 3
+   Top = 294
+   Width = 395
+   Height = 25
+   Caption = 'Send file not work'
+   Enabled = False                                    
+   TabOrder = 0
+end
+
+[VirtualDrawTree1]
+object VirtualDrawTree1: TVirtualDrawTree
+  Left = 0
+  Top = 350
+  Width = 395
+  Height = 215
+  Align = alClient
+  Header.AutoSizeIndex = 0
+  Header.Font.Charset = DEFAULT_CHARSET
+  Header.Font.Color = clWindowText
+  Header.Font.Height = -11
+  Header.Font.Name = 'MS Sans Serif'
+  Header.Font.Style = []
+  Header.MainColumn = -1
+  Header.Options = [hoColumnResize, hoDrag]
+  TabOrder = 1
+  Columns = <>
+end
+
+[VideoForm]
+object VideoForm: TVideoForm
+  Left = 10
+  Top = 10
+  Width = 200
+  Height = 200
+  AutoScroll = False
+  Caption = 'VideoForm'
+  Color = clBtnFace
+  DefaultMonitor = dmDesktop
+  Font.Charset = RUSSIAN_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+end
+
+[VideoFormMemo1]
+object Memo1: TMemo
+  Left = 32
+  Top = 16
+  Width = 89
+  Height = 33
+  Color = clBtnFace
+  Align = alClient
+end
+
+[VideoFormPanel1]
+object Panel1: TPanel
+  Left = 0
+  Top = 190
+  Width = 271
+  Height = 57
+  Align = alBottom
+end
+
+[VideoFormPanel2]
+object Panel2: TPanel
+  Left = 0
+  Top = 0
+  Width = 271
+  Height = 190
+  Align = alClient
+end
+
+[VideoFormPaintBox1]
+object PaintBox1: TPaintBox
+  Align = alClient
+  Left = 0
+  Top = 0
+  Width = 271
+  Height = 190
+end
